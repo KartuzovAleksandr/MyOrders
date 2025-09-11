@@ -18,4 +18,7 @@ public interface ProductDao {
 
     @Query("SELECT * FROM products WHERE id = :id")
     LiveData<Product> findById(int id);
+
+    @Query("SELECT * FROM products WHERE id = :id")
+    Product findByIdSync(int id); // 👈 синхронный метод
 }

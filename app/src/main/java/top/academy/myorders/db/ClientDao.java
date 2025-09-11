@@ -19,6 +19,9 @@ public interface ClientDao {
     @Query("SELECT * FROM clients WHERE id = :id")
     LiveData<Client> findById(int id);
 
+    @Query("SELECT * FROM clients WHERE id = :id")
+    Client findByIdSync(int id); // 👈 синхронный метод
+
     @Delete
     void delete(Client client);
 }

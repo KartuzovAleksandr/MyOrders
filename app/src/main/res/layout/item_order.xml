@@ -10,78 +10,94 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="16dp">
 
-        <!-- Заголовок заказа -->
-        <TextView
-            android:id="@+id/textOrderId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Заказ #1"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="?attr/colorPrimary" />
-
-        <!-- Информация о клиенте и товаре -->
-        <TextView
-            android:id="@+id/textOrderClient"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Клиент ID: 1"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textOrderProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Товар ID: 5"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textOrderQuantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Кол-во: 2"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textOrderDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Дата: 01.01.2025"
-            android:textSize="13sp"
-            android:textColor="?android:attr/textColorSecondary" />
-
-        <!-- Кнопки справа -->
+        <!-- Левая колонка: Информация о заказе -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:gravity="end"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <!-- Кнопка Редактировать -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonEditOrder"
-                style="@style/Widget.Material3.Button.TextButton"
+            <TextView
+                android:id="@+id/textOrderId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✏️"
-                android:contentDescription="Редактировать"
-                app:iconGravity="textStart" />
+                android:text="Заказ #1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary" />
 
-            <!-- Кнопка Удалить -->
+            <TextView
+                android:id="@+id/textOrderClientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Иван Иванов"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_person_16"
+                android:drawablePadding="4dp" />
+
+            <TextView
+                android:id="@+id/textOrderProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="iPhone 15 Pro"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_product_16"
+                android:drawablePadding="4dp" />
+
+            <TextView
+                android:id="@+id/textOrderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Сумма: $1999.98"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorSecondary" />
+
+            <TextView
+                android:id="@+id/textOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="01.01.2025, 15:30"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+        <!-- Правая колонка: Кнопки -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEditOrder"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                app:icon="@drawable/ic_edit_24"
+                app:iconTint="?attr/colorPrimary"
+                app:iconSize="20dp"
+                android:contentDescription="Редактировать" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDeleteOrder"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🗑️"
-                android:contentDescription="Удалить"
-                app:iconGravity="textStart" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:icon="@drawable/ic_delete_24"
+                app:iconTint="@android:color/holo_red_dark"
+                app:iconSize="20dp"
+                android:contentDescription="Удалить" />
 
         </LinearLayout>
 

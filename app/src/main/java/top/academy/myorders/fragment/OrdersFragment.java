@@ -10,28 +10,37 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import top.academy.myorders.R;
 import top.academy.myorders.adapter.OrderAdapter;
+import top.academy.myorders.databinding.FragmentOrdersBinding;
 import top.academy.myorders.viewmodel.OrderViewModel;
 
 public class OrdersFragment extends Fragment {
+
+    private FragmentOrdersBinding binding;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_orders, container, false);
+        binding = FragmentOrdersBinding.inflate(inflater, container, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewOrders);
+        RecyclerView recyclerView = binding.recyclerViewOrders;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        OrderAdapter adapter = new OrderAdapter(requireContext());
+        OrderViewModel viewModel = new ViewModelProvider(this).get(OrderViewModel.class);
+
+        OrderAdapter adapter = new OrderAdapter(requireContext(), viewModel);
         recyclerView.setAdapter(adapter);
 
-        OrderViewModel viewModel = new ViewModelProvider(this).get(OrderViewModel.class);
         viewModel.getAllOrders().observe(getViewLifecycleOwner(), orders -> {
             if (orders != null) {
                 adapter.setOrders(orders);
-            } else {
-                // Данные не заполнены
             }
         });
 
-        return view;
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

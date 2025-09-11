@@ -50,4 +50,24 @@ public class AppRepository {
             if (order != null) orderDao.delete(order);
         });
     }
+
+    // 👇 Синхронные методы для использования в фоновых потоках (например, в адаптере)
+
+    public Client getClientByIdSync(int id) {
+        try {
+            return executor.submit(() -> clientDao.findByIdSync(id)).get();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public Product getProductByIdSync(int id) {
+        try {
+            return executor.submit(() -> productDao.findByIdSync(id)).get();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
