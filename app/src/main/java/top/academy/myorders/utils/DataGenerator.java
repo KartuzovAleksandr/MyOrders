@@ -16,8 +16,6 @@ public class DataGenerator {
     public static void generateData(Context context, Runnable onFinished) {
         AppDatabase db = AppDatabase.getDatabase(context);
         Faker faker = new Faker(new Locale("ru"));
-//        Faker faker = new Faker(Locale.ENGLISH);
-//        Log.d("FAKER_TEST", "Name: " + faker.name().fullName());
 
         AppDatabase.databaseWriteExecutor.execute(() -> {
             try {
