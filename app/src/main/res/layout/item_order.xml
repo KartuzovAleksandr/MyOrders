@@ -81,22 +81,22 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonEditOrder"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="8dp"
                 app:icon="@drawable/ic_edit_24"
                 app:iconTint="?attr/colorPrimary"
-                app:iconSize="20dp"
+                app:iconSize="32dp"
                 android:contentDescription="Редактировать" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDeleteOrder"
                 style="@style/Widget.Material3.Button.TextButton.Icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 app:icon="@drawable/ic_delete_24"
                 app:iconTint="@android:color/holo_red_dark"
-                app:iconSize="20dp"
+                app:iconSize="32dp"
                 android:contentDescription="Удалить" />
 
         </LinearLayout>

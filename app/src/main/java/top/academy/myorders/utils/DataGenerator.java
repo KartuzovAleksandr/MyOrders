@@ -77,9 +77,9 @@ public class DataGenerator {
                 };
 
                 String[] images = {
-                        "https://images.unsplash.com/photo-1605236453806-6ff3b6a0a554?w=300&h=300&fit=crop", // iPhone 15 Pro
+                        "https://images.unsplash.com/photo-LunVPm34ly4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80", // iPhone 15 Pro
                         "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop", // MacBook Air M2
-                        "https://images.unsplash.com/photo-1610945265018-739c5c86f805?w=300&h=300&fit=crop", // Samsung Galaxy S24
+                        "https://images.unsplash.com/photo-vjgTcqbajS4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80", // Samsung Galaxy S24
                         "https://images.unsplash.com/photo-1627857088035-9986a4f9a8d8?w=300&h=300&fit=crop", // PlayStation 5
                         "https://images.unsplash.com/photo-1627857088040-5b2127c2c5e1?w=300&h=300&fit=crop", // Xbox Series X
                         "https://images.unsplash.com/photo-1544345932-9772e1d2e1f0?w=300&h=300&fit=crop", // iPad Pro
