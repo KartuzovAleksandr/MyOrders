@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:text="Наименование"
             android:textColor="?attr/colorPrimary"
             android:textStyle="bold" />
 
@@ -36,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:text="Модель"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -45,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:text="Описание"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?attr/colorOnSurface" />
 
@@ -55,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:text="Цена"
             android:textColor="?attr/colorSecondary"
             android:textStyle="bold" />
 
@@ -83,7 +87,6 @@
                 android:clickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Количество -->
@@ -100,7 +103,6 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:text="1" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Итого -->
